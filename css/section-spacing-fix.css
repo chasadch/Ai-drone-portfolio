@@ -1,0 +1,144 @@
+/* Section Spacing Fix 
+   This CSS ensures proper spacing between all sections and fixes the hero section overlap 
+   Enhanced for AI Autonomous Drone Portfolio */
+
+/* Global section spacing */
+section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    transition: padding 0.3s ease;
+}
+
+/* Add proper margin to the first section after hero */
+.hero-section + section {
+    margin-top: 120px;
+    padding-top: 150px;
+    background-color: rgba(5, 10, 30, 0.98); /* Slightly different background color */
+    position: relative;
+    z-index: 10; /* Higher z-index than hero */
+    border-top: 1px solid rgba(0, 229, 255, 0.2); /* Subtle separator line */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Fix hero section to ensure it's fully visible */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    min-height: 900px; /* Increased minimum height to ensure content fits */
+    padding: 120px 0 100px; /* Increased bottom padding for better spacing */
+    margin-bottom: 80px; /* Add bottom margin for clear separation */
+    display: flex;
+    align-items: center;
+    overflow: visible; /* Allow content to flow naturally */
+    z-index: 1;
+}
+
+/* Ensure hero content container has proper spacing */
+.hero-grid {
+    padding: 40px 0;
+}
+
+/* Add a visible divider between hero and next section */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(5, 10, 30, 0) 0%, rgba(5, 10, 30, 0.9) 80%, rgba(5, 10, 30, 1) 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Ensure services section has proper spacing */
+.services-section {
+    padding-top: 100px;
+    margin-top: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Add divider between sections for visual separation */
+section:not(.hero-section):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    border-radius: 2px;
+}
+
+/* Clear any floats to prevent layout issues */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add additional padding to bottom sections */
+.testimonials-section,
+.contact-section {
+    padding: 120px 0;
+}
+
+/* Tech highlight section spacing */
+.tech-highlight-section {
+    padding: 150px 0;
+    margin: 50px 0;
+}
+
+/* Portfolio section specific spacing */
+.portfolio-section {
+    padding: 120px 0 150px;
+}
+
+/* Video showcase additional spacing */
+.portfolio-video-showcase {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+/* Media queries for responsive section spacing */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 80px 0;
+    }
+    
+    .hero-section {
+        min-height: 700px;
+        padding: 100px 0 60px;
+    }
+    
+    .hero-section + section {
+        padding-top: 80px;
+    }
+    
+    .tech-highlight-section {
+        padding: 100px 0;
+        margin: 30px 0;
+    }
+    
+    .portfolio-section {
+        padding: 80px 0 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero-section {
+        min-height: 600px;
+        padding: 80px 0 40px;
+    }
+    
+    .hero-section + section {
+        padding-top: 60px;
+    }
+}

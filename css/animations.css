@@ -1,0 +1,206 @@
+/* Animation Styles to support new-animations.js */
+
+/* Hero Section Animation Styles */
+.hero-title-line,
+.hero-title-accent,
+.hero-description,
+.hero-cta,
+.hero-stats,
+.hero-drone-showcase {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero-title-line,
+.hero-title-accent,
+.hero-description {
+    transform: translateY(30px);
+}
+
+.hero-cta,
+.hero-stats {
+    transform: translateY(30px);
+}
+
+.hero-drone-showcase {
+    transform: translateX(30px);
+}
+
+/* Staggered Entrance Animations */
+.service-card,
+.portfolio-item,
+.drone-select-item,
+.video-item,
+.testimonial-card,
+.tech-feature {
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Portfolio Filter Animations */
+.portfolio-item {
+    transition: opacity 0.4s ease, transform 0.4s ease, display 0.4s ease;
+}
+
+/* Drone Selection Animation */
+#drone-3d-view {
+    transition: opacity 0.3s ease;
+}
+
+.drone-specs-tab {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: absolute;
+    width: 100%;
+}
+
+.drone-specs-tab.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+/* Video Players Custom Animation */
+.video-item, 
+.drone-3d-view {
+    position: relative;
+}
+
+.video-item.loading::after,
+.drone-3d-view.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Button Hover Effects */
+.btn-primary, 
+.btn-secondary, 
+.nav-cta-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before,
+.btn-secondary::before,
+.nav-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before,
+.nav-cta-btn:hover::before {
+    transform: scale(2);
+    opacity: 1;
+}
+
+/* Parallax and Mouse Move Effects */
+.tech-highlight-section,
+.hero-background {
+    transition: background-position 0.2s ease-out;
+}
+
+.hero-content,
+.hero-drone-showcase {
+    transition: transform 0.1s ease-out;
+}
+
+/* Loading Progress Bar Animation */
+.loader-progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 100%;
+    animation: gradientShift 2s linear infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade Out Loader */
+.loader-container {
+    transition: opacity 0.5s ease;
+}
+
+/* Navbar Scroll Animation */
+.navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-btn span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Tech Feature Hover Effect */
+.tech-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 229, 255, 0.1);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* Service Card Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonial Card Animation */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Hover Effects */
+.tech-image,
+.drone-image {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Cursor Animation for Interactive Elements */
+.portfolio-video,
+.drone-showcase-video {
+    cursor: pointer;
+}
+
+.portfolio-video:hover,
+.drone-showcase-video:hover {
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}

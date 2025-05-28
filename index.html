@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneVision | Professional Drone Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/portfolio-fix.css">
+    <link rel="stylesheet" href="css/section-spacing-fix.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader-content">
+            <div class="loader-drone-container">
+                <div class="loader-drone">
+                    <div class="loader-drone-body"></div>
+                    <div class="loader-drone-camera"></div>
+                    <div class="loader-propeller loader-propeller-1">
+                        <div class="loader-blade"></div>
+                        <div class="loader-blade"></div>
+                    </div>
+                    <div class="loader-propeller loader-propeller-2">
+                        <div class="loader-blade"></div>
+                        <div class="loader-blade"></div>
+                    </div>
+                    <div class="loader-propeller loader-propeller-3">
+                        <div class="loader-blade"></div>
+                        <div class="loader-blade"></div>
+                    </div>
+                    <div class="loader-propeller loader-propeller-4">
+                        <div class="loader-blade"></div>
+                        <div class="loader-blade"></div>
+                    </div>
+                </div>
+                <div class="loader-shadow"></div>
+            </div>
+            <div class="loader-text">
+                <div class="loader-brand">DRONE<span>VISION</span></div>
+                <div class="loader-status">System Initializing</div>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+                <div class="loader-progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">Drone<span>Vision</span></div>
+            <div class="navbar-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#tech-highlight" class="nav-link">AI Technology</a>
+                <a href="#drone-specs" class="nav-link">Our Drones</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="navbar-cta">
+                <a href="#contact" class="nav-cta-btn">Get a Quote</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 3D Drone -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-video-container">
+                <video autoplay muted loop class="hero-video">
+                    <source src="images/object detection video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-particles"></div>
+        </div>
+        
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-tagline">AI-Powered Autonomous Solutions</div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">INTELLIGENT</span>
+                    <span class="hero-title-line">AUTONOMOUS</span>
+                    <span class="hero-title-accent">DRONE SYSTEMS</span>
+                </h1>
+                <p class="hero-description">Revolutionary AI-driven drones with advanced computer vision, autonomous navigation, and intelligent decision-making capabilities for next-generation aerial operations.</p>
+                
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn-primary">View Our Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-secondary">Get a Quote</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">10+</div>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Projects Completed</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">100%</div>
+                        <div class="hero-stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-drone-showcase">
+                <div id="drone-canvas-container" class="drone-canvas-container">
+                    <!-- Three.js canvas will be injected here -->
+                </div>
+                <div class="hero-drone-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-camera"></i></div>
+                        <div class="hero-feature-text">6K Cinema Camera</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-battery-full"></i></div>
+                        <div class="hero-feature-text">35min Flight Time</div>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon"><i class="fas fa-wind"></i></div>
+                        <div class="hero-feature-text">Wind Resistant</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-icon">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+        
+        <div class="hero-brands">
+            <div class="hero-brands-title">Trusted By</div>
+            <div class="hero-brands-logos">
+                <div class="brand-logo">NETFLIX</div>
+                <div class="brand-logo">NATGEO</div>
+                <div class="brand-logo">REDBULL</div>
+                <div class="brand-logo">DISCOVERY</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2>AI Drone Capabilities</h2>
+            <p>Advanced autonomous systems for intelligent aerial operations</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <h3>Autonomous Navigation</h3>
+                <p>Self-navigating drones with obstacle avoidance, path optimization, and GPS-free positioning systems.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Computer Vision</h3>
+                <p>Advanced object detection and tracking with real-time analysis and deep learning algorithms.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Data Analytics</h3>
+                <p>Intelligent data processing with on-board computing, real-time insights, and cloud integration.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Autonomous Inspection</h3>
+                <p>Self-directed infrastructure inspection with anomaly detection and predictive maintenance.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Swarm Intelligence</h3>
+                <p>Multi-drone coordination with decentralized decision-making and collective mission planning.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Adaptive Learning</h3>
+                <p>Self-improving systems that optimize performance through machine learning and experience.</p>
+                <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section with WebGL Gallery -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2>AI Drone Projects</h2>
+            <p>Breakthrough autonomous systems and real-world applications</p>
+        </div>
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai-vision">AI Vision</button>
+            <button class="filter-btn" data-filter="autonomy">Autonomy</button>
+            <button class="filter-btn" data-filter="analytics">Analytics</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="ai-vision">
+                <div class="portfolio-image">
+                    <img src="images/making.jpg" alt="AI Object Detection">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Vision System V3</h3>
+                            <p>Real-time Object Detection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="autonomy">
+                <div class="portfolio-image">
+                    <img src="images/obj model training.jpg" alt="Model Training">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>Neural Navigator</h3>
+                            <p>Autonomous Flight System</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="analytics">
+                <div class="portfolio-image">
+                    <img src="images/model traning results.png" alt="AI Model Training Results">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>DataSense AI</h3>
+                            <p>Predictive Analytics Engine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="research">
+                <div class="portfolio-image">
+                    <img src="images/Screenshot 2025-05-14 125241.jpg" alt="AI Research">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>SwarmLink</h3>
+                            <p>Multi-Drone Coordination</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="ai-vision">
+                <div class="portfolio-image">
+                    <img src="images/WhatsApp Image 2025-05-02 at 09.29.30_55b67871.jpg" alt="Computer Vision">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>PerceptionAI</h3>
+                            <p>Environmental Understanding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="autonomy">
+                <div class="portfolio-image">
+                    <img src="images/making.jpg" alt="Autonomous System">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <h3>AutoPilot X</h3>
+                            <p>Self-Governing Flight</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio-webgl" class="portfolio-webgl">
+            <!-- WebGL portfolio gallery will be rendered here -->
+        </div>
+        <div class="portfolio-video-showcase">
+            <div class="section-subheader">
+                <h3>Drone Testing Footage</h3>
+                <p>Watch our drones in action during field testing</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video controls class="portfolio-video">
+                        <source src="images/testing video_1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-caption">
+                        <h4>Field Test #1</h4>
+                        <p>Testing drone stability and maneuverability</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <video controls class="portfolio-video">
+                        <source src="images/object detection video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-caption">
+                        <h4>Object Detection Demo</h4>
+                        <p>Advanced AI-powered object detection system in action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Technology Highlight Section -->
+    <section id="tech-highlight" class="tech-highlight-section">
+        <div class="tech-highlight-container">
+            <div class="tech-highlight-content">
+                <div class="tech-highlight-badge">Cutting-Edge Intelligence</div>
+                <h2 class="tech-highlight-title">Fully <span>Autonomous Systems</span></h2>
+                <p class="tech-highlight-description">Our drones feature state-of-the-art neural networks that enable complete autonomy without human intervention. These systems can analyze environments, make complex decisions, self-navigate through challenging spaces, and adapt to changing conditions in real-time.</p>
+                <div class="tech-highlight-features">
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-robot"></i></div>
+                        <div class="tech-feature-text">Complete Autonomy</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-brain"></i></div>
+                        <div class="tech-feature-text">Self-Learning Algorithms</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="tech-feature-text">GPS-Free Navigation</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="tech-feature-text">Advanced Safety Systems</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="tech-feature-text">Multi-Drone Coordination</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary tech-cta">Request AI Demo</a>
+            </div>
+            <div class="tech-highlight-image">
+                <img src="images/model traning results.png" alt="AI Object Detection Model" class="tech-image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Drone Fleet Specifications -->
+    <section id="drone-specs" class="drone-specs-section">
+        <div class="section-header">
+            <h2>Autonomous Systems</h2>
+            <p>Next-generation AI drones with advanced computing capabilities</p>
+        </div>
+        <div class="drone-specs-container">
+            <div class="drone-selector">
+                <div class="drone-select-item active" data-drone="drone1">
+                    <div class="drone-select-image">
+                        <img src="images/obj model training.jpg" alt="CineMaster Pro X8 Drone" class="drone-image">
+                    </div>
+                    <div class="drone-select-info">
+                        <h4>AutonomyX Pro</h4>
+                        <p>Edge AI computing platform</p>
+                    </div>
+                </div>
+                <div class="drone-select-item" data-drone="drone2">
+                    <div class="drone-select-image">
+                        <img src="images/WhatsApp Image 2025-05-02 at 09.29.30_55b67871.jpg" alt="Agility FPV 5 Drone" class="drone-image">
+                    </div>
+                    <div class="drone-select-info">
+                        <h4>Neural Navigator 5</h4>
+                        <p>Self-learning flight system</p>
+                    </div>
+                </div>
+                <div class="drone-select-item" data-drone="drone3">
+                    <div class="drone-select-image">
+                        <img src="images/Screenshot 2025-05-14 125241.jpg" alt="SurveyMaster 600 Drone" class="drone-image">
+                    </div>
+                    <div class="drone-select-info">
+                        <h4>SmartSense 600</h4>
+                        <p>Environmental analysis system</p>
+                    </div>
+                </div>
+            </div>
+            <div class="drone-details">
+                <div id="drone-3d-view" class="drone-3d-view">
+                    <!-- Video showcase instead of 3D model -->
+                    <video class="drone-showcase-video" controls>
+                        <source src="images/tesing video 2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="drone-specs-details">
+                    <div class="drone-specs-tab active" id="drone1-specs">
+                        <h3>AutonomyX Pro</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-microchip"></i></div>
+                                <div class="spec-name">AI Processor</div>
+                                <div class="spec-value">Neural Engine 5.0</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-clock"></i></div>
+                                <div class="spec-name">Flight Time</div>
+                                <div class="spec-value">35 minutes</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-memory"></i></div>
+                                <div class="spec-name">Onboard RAM</div>
+                                <div class="spec-value">32 GB LPDDR5</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-eye"></i></div>
+                                <div class="spec-name">Vision System</div>
+                                <div class="spec-value">360° 4D Perception</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-brain"></i></div>
+                                <div class="spec-name">Decision Rate</div>
+                                <div class="spec-value">500 Hz</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-network-wired"></i></div>
+                                <div class="spec-name">Neural Pathways</div>
+                                <div class="spec-value">24 billion</div>
+                            </div>
+                        </div>
+                        <div class="drone-ideal-for">
+                            <h4>Ideal For:</h4>
+                            <ul>
+                                <li>Complex Navigation</li>
+                                <li>Object Recognition</li>
+                                <li>Autonomous Missions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Other drone specs tabs will be added dynamically via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-header">
+            <h2>Client Testimonials</h2>
+            <p>What our clients say about our services</p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>The aerial footage provided by DroneVision for our real estate development was absolutely stunning. Their team was professional, efficient, and delivered beyond our expectations.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image-placeholder"></div>
+                        <div class="author-info">
+                            <h4>Michael Anderson</h4>
+                            <p>Director, Skyline Properties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>DroneVision's work on our documentary was exceptional. They captured breathtaking aerial shots in challenging conditions that added tremendous value to our project.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image-placeholder"></div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Film Producer, Horizon Films</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>We hired DroneVision for our infrastructure inspection needs, and they delivered precise, detailed analysis that helped us identify issues we would have otherwise missed.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image-placeholder"></div>
+                        <div class="author-info">
+                            <h4>David Thompson</h4>
+                            <p>Chief Engineer, Bridge Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-controls">
+            <button class="testimonial-prev" aria-label="Previous testimonial" title="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="testimonial-next" aria-label="Next testimonial" title="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Inquire about our autonomous drone solutions</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Address</h4>
+                        <p>123 Skyview Drive, Drone City, DC 12345</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p>info@dronevision.com</p>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Vimeo" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required aria-label="Select Service" title="Select Service">
+                            <option value="" disabled selected>Select AI capability of interest</option>
+                            <option value="autonomous-navigation">Autonomous Navigation</option>
+                            <option value="computer-vision">Computer Vision</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="inspection">Autonomous Inspection</option>
+                            <option value="swarm">Swarm Intelligence</option>
+                            <option value="adaptive">Adaptive Learning</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <div class="form-response"></div>
+                    <button type="submit" class="btn-primary form-submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span>Drone<span class="highlight">Vision</span></span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#drone-specs">Drone Fleet</a></li>
+                        <li><a href="#testimonials">Clients</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Cinematic Footage</a></li>
+                        <li><a href="#services">Aerial Photography</a></li>
+                        <li><a href="#services">Real Estate Tours</a></li>
+                        <li><a href="#services">Mapping & Surveying</a></li>
+                        <li><a href="#services">Event Coverage</a></li>
+                        <li><a href="#services">Industrial Inspection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAA Compliance</a></li>
+                        <li><a href="#">Licensing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 DroneVision. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/drone-model.js"></script>
+    <script src="js/portfolio-gallery.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/new-animations.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/portfolio-image-fix.js"></script>
+    <script src="js/api-service.js"></script>
+</body>
+</html>
