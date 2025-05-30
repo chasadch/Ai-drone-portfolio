@@ -1,0 +1,81 @@
+/* Featured Drone Image Styling */
+.featured-drone-image {
+    width: 100%;
+    object-fit: contain;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(10, 11, 25, 0.9));
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    transform: scale(0.95);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.timeline-image:hover .featured-drone-image {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
+}
+
+/* Special glow effect for the final drone image */
+.featured-drone-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 229, 255, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.timeline-image:hover .featured-drone-image::after {
+    opacity: 1;
+}
+
+/* Featured Video Styling */
+.featured-video {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.featured-video::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: calc(var(--radius-lg) + 5px);
+    padding: 5px;
+    background: linear-gradient(45deg, rgba(0, 229, 255, 0.8), rgba(98, 0, 234, 0.5), rgba(0, 229, 255, 0.8));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.featured-video .portfolio-video {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+    background: rgba(10, 11, 25, 0.9);
+    border: 2px solid rgba(10, 11, 25, 0.8);
+    transition: transform 0.5s ease;
+}
+
+.featured-video .video-caption {
+    text-align: center;
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    background: rgba(16, 18, 45, 0.5);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    backdrop-filter: var(--backdrop-blur);
+}

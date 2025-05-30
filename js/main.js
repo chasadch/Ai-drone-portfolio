@@ -28,27 +28,31 @@ document.addEventListener('DOMContentLoaded', function() {
 // Page Loader
 function initPageLoader() {
     const loader = document.querySelector('.loader-container');
-    const loadingBar = document.querySelector('.loading-bar');
-    let width = 0;
     
-    // Simulate loading progress
-    const interval = setInterval(() => {
-        width += Math.floor(Math.random() * 10) + 1;
-        if (width > 100) width = 100;
-        loadingBar.style.width = width + '%';
-        
-        if (width === 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                loader.style.opacity = '0';
+    // Simply hide the loader after assets are loaded
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            if (loader) {
+                loader.classList.add('hidden');
                 setTimeout(() => {
                     loader.style.display = 'none';
                     // Animate elements after page load
                     animateElementsOnLoad();
                 }, 500);
+            }
+        }, 1000); // Wait a second after load to ensure everything is ready
+    });
+    
+    // Fallback in case window load event doesn't fire
+    setTimeout(() => {
+        if (loader && !loader.classList.contains('hidden')) {
+            loader.classList.add('hidden');
+            setTimeout(() => {
+                loader.style.display = 'none';
+                animateElementsOnLoad();
             }, 500);
         }
-    }, 200);
+    }, 5000); // 5 second fallback
 }
 
 // Animate elements after page load

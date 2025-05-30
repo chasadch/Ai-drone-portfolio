@@ -756,6 +756,172 @@ button {
     }
 }
 
+/* Supervisor Section */
+.supervisor-section {
+    background: var(--dark-bg);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.supervisor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.03) 0%, rgba(41, 121, 255, 0.03) 100%);
+    z-index: 0;
+}
+
+.supervisor-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: rgba(16, 18, 45, 0.7);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.supervisor-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.supervisor-image {
+    flex: 0 0 350px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 8px solid rgba(255, 255, 255, 0.05);
+    background: var(--dark-bg);
+}
+
+.supervisor-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1) 0%, rgba(41, 121, 255, 0.1) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.supervisor-content:hover .supervisor-image::before {
+    opacity: 1;
+}
+
+.supervisor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: center;
+}
+
+.supervisor-content:hover .supervisor-img {
+    transform: scale(1.03);
+}
+
+.supervisor-info {
+    flex: 1;
+}
+
+.supervisor-info h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.supervisor-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    border-radius: 3px;
+}
+
+.supervisor-title {
+    font-size: 1.2rem;
+    color: #a0a8c0;
+    margin: 25px 0;
+    font-weight: 500;
+    position: relative;
+    padding-left: 20px;
+}
+
+.supervisor-title::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.supervisor-description {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid rgba(0, 229, 255, 0.2);
+}
+
+.supervisor-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.expertise-tag {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .supervisor-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .supervisor-image {
+        margin: 0 auto 30px;
+        max-width: 300px;
+    }
+    
+    .supervisor-expertise {
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hero-buttons {
         flex-direction: column;
@@ -767,6 +933,18 @@ button {
     }
 
     .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .supervisor-content {
+        padding: 25px;
+    }
+    
+    .supervisor-info h3 {
+        font-size: 1.7rem;
+    }
+    
+    .supervisor-title {
         font-size: 1rem;
     }
 }
