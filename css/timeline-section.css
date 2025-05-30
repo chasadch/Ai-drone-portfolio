@@ -1,0 +1,238 @@
+/* 
+ * IMPLEMENTATION TIMELINE SECTION
+ * Styles for the timeline-based implementation section
+ */
+
+.implementation-timeline {
+  background-color: #0a0e1a;
+  position: relative;
+  padding: 80px 0;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Timeline central line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #00c6ff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+  z-index: 1;
+}
+
+/* Timeline items */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+}
+
+/* Alternate timeline items left/right */
+.timeline-item:nth-child(odd) .timeline-content {
+  float: right;
+  padding-left: 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: left;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-details ul {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/* Timeline markers (numbers) */
+.timeline-marker {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -25px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Timeline content */
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background-color: rgba(15, 20, 35, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 198, 255, 0.3);
+}
+
+/* Timeline headings */
+.timeline-content h3 {
+  color: #00c6ff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* Timeline images */
+.timeline-image {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.timeline-content:hover .timeline-image img {
+  transform: scale(1.05);
+}
+
+/* Timeline details */
+.timeline-details p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Timeline highlights (bullet points) */
+.timeline-highlights {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.timeline-highlights li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  color: #cccccc;
+}
+
+.timeline-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #00c6ff;
+  border-radius: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-highlights li {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.timeline-item:nth-child(even) .timeline-highlights li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  .timeline-container::before {
+    left: 40px;
+  }
+  
+  .timeline-item {
+    padding-left: 80px;
+    padding-right: 20px;
+  }
+  
+  .timeline-marker {
+    left: 40px;
+    margin-left: 0;
+  }
+  
+  .timeline-content {
+    width: 100%;
+    float: right !important;
+    padding-left: 30px !important;
+    text-align: left !important;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-details ul {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-highlights li {
+    padding-left: 25px;
+    padding-right: 0;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-highlights li::before {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .timeline-container {
+    padding: 20px 10px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+    padding-right: 10px;
+  }
+  
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 20px;
+  }
+}

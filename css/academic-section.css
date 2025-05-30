@@ -1,0 +1,90 @@
+/* 
+ * Academic Project Details Styling
+ * For university final year project presentation
+ */
+
+.academic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.academic-info {
+    width: 100%;
+    padding: 30px;
+}
+
+.academic-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-dark, #333);
+    position: relative;
+}
+
+.academic-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color, #e63946);
+}
+
+.academic-details p {
+    color: var(--text-light, #666);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.academic-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+    min-width: 150px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color, #e63946);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-dark, #333);
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .academic-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+}

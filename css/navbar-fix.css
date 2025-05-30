@@ -1,0 +1,68 @@
+/* 
+ * Navigation Bar Fixes
+ * Ensuring all menu items display properly
+ */
+
+/* Increase spacing and improve visibility */
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 15px;
+}
+
+/* Make navigation links more compact but still visible */
+.navbar-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: visible;
+}
+
+.nav-link {
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 5px 0;
+}
+
+/* Ensure CTA button is properly sized */
+.navbar-cta .nav-cta-btn {
+  white-space: nowrap;
+  padding: 8px 15px;
+}
+
+/* Fix for smaller screens */
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+  .navbar-links {
+    gap: 15px;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Improve mobile menu */
+@media screen and (max-width: 992px) {
+  .navbar-links {
+    padding-top: 80px;
+  }
+  
+  .navbar-links a {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Add specific styling for logos and buttons on small screens */
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 0 10px;
+  }
+  
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
+}

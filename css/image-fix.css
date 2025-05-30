@@ -1,0 +1,59 @@
+/* 
+ * Emergency Image Fix
+ * Force all images to display properly
+ */
+
+/* Global image fix */
+img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Target specific sections */
+.tech-highlight-image img,
+.team-image-container img,
+.portfolio-item img,
+.drone-select-image img,
+.service-icon img {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10;
+  position: relative;
+}
+
+/* Ensure parent containers display properly */
+.tech-highlight-image,
+.team-image-container,
+.portfolio-item,
+.drone-select-image,
+.drone-specs-image,
+.service-icon {
+  display: block;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video containers */
+video,
+.video-container video {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for specific team image */
+.team-image {
+  display: block !important;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

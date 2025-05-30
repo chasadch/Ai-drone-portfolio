@@ -1,0 +1,103 @@
+/* Team Section Styling */
+.team-section {
+    background-color: var(--section-bg, #f8f9fa);
+    padding: 100px 0;
+}
+
+.team-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.team-image-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.team-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-dark, #333);
+    position: relative;
+}
+
+.team-description h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color, #e63946);
+}
+
+.team-description p {
+    color: var(--text-light, #666);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.team-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.team-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.team-highlight-item i {
+    color: var(--primary-color, #e63946);
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(230, 57, 70, 0.1);
+    border-radius: 50%;
+}
+
+.team-highlight-item span {
+    font-weight: 500;
+    color: var(--text-dark, #333);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-image-container {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .team-content {
+        width: 100%;
+    }
+}

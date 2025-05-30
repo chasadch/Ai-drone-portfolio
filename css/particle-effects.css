@@ -1,0 +1,185 @@
+/**
+ * Particle Effects and Advanced Animations
+ * for AI Autonomous Drone Portfolio
+ */
+
+/* Particle container and individual particles */
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(0, 229, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float-particle 20s infinite ease-in-out alternate;
+}
+
+@keyframes float-particle {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 25px);
+    }
+    50% {
+        transform: translate(0, 50px);
+    }
+    75% {
+        transform: translate(-50px, 25px);
+    }
+}
+
+/* Enhanced tech element animations */
+.tech-element {
+    animation: pulse 3s infinite alternate;
+    position: absolute;
+}
+
+@keyframes floatX {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; filter: blur(0px); }
+    50% { opacity: 0.8; filter: blur(1px); }
+    100% { opacity: 1; filter: blur(0px); }
+}
+
+/* Target points for scanner animation */
+.target-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid rgba(0, 229, 255, 0.8);
+    animation: target-pulse 3s infinite;
+}
+
+.target-point::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    transform: translate(-50%, -50%);
+    animation: target-expand 3s infinite;
+}
+
+.target-point::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 229, 255, 1);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+@keyframes target-pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes target-expand {
+    0% { width: 10px; height: 10px; opacity: 0.8; }
+    100% { width: 30px; height: 30px; opacity: 0; }
+}
+
+/* Drone silhouette enhancement */
+.drone-silhouette {
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
+    transition: filter 2s ease;
+}
+
+/* Enhanced button hover effects */
+.primary-button, .secondary-button {
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.7);
+}
+
+.secondary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+/* Metric hover effects */
+.metric {
+    transition: transform 0.3s ease;
+}
+
+.metric:hover {
+    transform: scale(1.05);
+}
+
+.metric:hover .metric-value {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.9);
+}
+
+/* Enhanced scroll line animation */
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00e5ff;
+    left: -2px;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+    animation: scrollDown 2s infinite;
+}
+
+/* Holographic text effect for title */
+.hero-title-highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 100%
+    );
+    animation: holographic-sweep 5s infinite;
+}
+
+@keyframes holographic-sweep {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}

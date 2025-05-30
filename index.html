@@ -6,12 +6,21 @@
     <title>DroneVision | Professional Drone Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/contact-form.css">
     <link rel="stylesheet" href="css/portfolio-fix.css">
     <link rel="stylesheet" href="css/section-spacing-fix.css">
+    <link rel="stylesheet" href="css/image-cleanup.css">
+    <link rel="stylesheet" href="css/hero-redesign.css">
+    <link rel="stylesheet" href="css/particle-effects.css">
+    <link rel="stylesheet" href="css/dsi-redesign.css">
+    <link rel="stylesheet" href="css/team-section.css">
+    <link rel="stylesheet" href="css/image-fix.css">
+    <link rel="stylesheet" href="css/academic-section.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
+    <link rel="stylesheet" href="css/emergency-fix.css">
+    <link rel="stylesheet" href="css/timeline-section.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -61,18 +70,18 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">Drone<span>Vision</span></div>
+            <div class="navbar-logo">Drone<span>Nav</span></div>
             <div class="navbar-links">
-                <a href="#hero" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#tech-highlight" class="nav-link">AI Technology</a>
-                <a href="#drone-specs" class="nav-link">Our Drones</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#hero" class="nav-link active">Overview</a>
+                <a href="#services" class="nav-link">Key Features</a>
+                <a href="#portfolio" class="nav-link">Implementation</a>
+                <a href="#tech-highlight" class="nav-link">Technology</a>
+                <a href="#drone-specs" class="nav-link">Design</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Details</a>
             </div>
             <div class="navbar-cta">
-                <a href="#contact" class="nav-cta-btn">Get a Quote</a>
+                <a href="#contact" class="nav-cta-btn">Project Details</a>
             </div>
             <div class="mobile-menu-btn">
                 <span></span>
@@ -82,93 +91,89 @@
         </div>
     </nav>
 
-    <!-- Hero Section with 3D Drone -->
+    <!-- Hero Section - Futuristic Design -->
     <section id="hero" class="hero-section">
-        <div class="hero-background">
-            <div class="hero-video-container">
-                <video autoplay muted loop class="hero-video">
-                    <source src="images/object detection video.mp4" type="video/mp4">
-                </video>
+        <div class="hero-split-design">
+            <div class="hero-left-panel">
+                <div class="ai-scanner-animation">
+                    <div class="scan-line"></div>
+                    <div class="scan-grid"></div>
+                    <div class="scan-target-points"></div>
+                </div>
+                <div class="floating-tech-elements">
+                    <div class="tech-element" data-speed="0.5"><i class="fas fa-microchip"></i></div>
+                    <div class="tech-element" data-speed="0.8"><i class="fas fa-network-wired"></i></div>
+                    <div class="tech-element" data-speed="0.3"><i class="fas fa-brain"></i></div>
+                    <div class="tech-element" data-speed="0.6"><i class="fas fa-project-diagram"></i></div>
+                </div>
             </div>
-            <div class="hero-gradient-overlay"></div>
-            <div class="hero-particles"></div>
+            <div class="hero-right-panel">
+                <div class="video-container">
+                    <video autoplay muted loop class="hero-video">
+                        <source src="images/object detection video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
         </div>
         
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="hero-tagline">AI-Powered Autonomous Solutions</div>
-                <h1 class="hero-title">
-                    <span class="hero-title-line">INTELLIGENT</span>
-                    <span class="hero-title-line">AUTONOMOUS</span>
-                    <span class="hero-title-accent">DRONE SYSTEMS</span>
-                </h1>
-                <p class="hero-description">Revolutionary AI-driven drones with advanced computer vision, autonomous navigation, and intelligent decision-making capabilities for next-generation aerial operations.</p>
-                
-                <div class="hero-cta">
-                    <a href="#portfolio" class="btn-primary">View Our Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn-secondary">Get a Quote</a>
+        <div class="hero-content-container">
+            <div class="hero-badge">FINAL YEAR PROJECT</div>
+            <h1 class="hero-title">
+                <div class="hero-title-main">AUTONOMOUS NAVIGATION</div>
+                <div class="hero-title-highlight">WITH OBSTACLE AVOIDANCE</div>
+            </h1>
+            
+            <div class="hero-description">
+                <p>A university final year project developing a point-to-point autonomous drone system with real-time obstacle detection and avoidance capabilities in complex environments.</p>
+            </div>
+            
+            <div class="hero-metrics">
+                <div class="metric">
+                    <div class="metric-value">85%</div>
+                    <div class="metric-label">NAVIGATION ACCURACY</div>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">10+</div>
-                        <div class="hero-stat-label">Years Experience</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">500+</div>
-                        <div class="hero-stat-label">Projects Completed</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">100%</div>
-                        <div class="hero-stat-label">Client Satisfaction</div>
-                    </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <div class="metric-value">YOLOv12</div>
+                    <div class="metric-label">AI MODEL</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <div class="metric-value">180°</div>
+                    <div class="metric-label">SENSOR COVERAGE</div>
                 </div>
             </div>
             
-            <div class="hero-drone-showcase">
-                <div id="drone-canvas-container" class="drone-canvas-container">
-                    <!-- Three.js canvas will be injected here -->
-                </div>
-                <div class="hero-drone-features">
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon"><i class="fas fa-camera"></i></div>
-                        <div class="hero-feature-text">6K Cinema Camera</div>
-                    </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon"><i class="fas fa-battery-full"></i></div>
-                        <div class="hero-feature-text">35min Flight Time</div>
-                    </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon"><i class="fas fa-wind"></i></div>
-                        <div class="hero-feature-text">Wind Resistant</div>
-                    </div>
-                </div>
+            <div class="hero-cta">
+                <a href="#tech-highlight" class="primary-button">
+                    <span class="button-text">EXPLORE TECHNOLOGY</span>
+                    <span class="button-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#contact" class="secondary-button">
+                    <span class="button-text">REQUEST DEMO</span>
+                </a>
             </div>
         </div>
         
-        <div class="hero-scroll-indicator">
-            <span>Scroll to Explore</span>
-            <div class="scroll-icon">
-                <div class="scroll-wheel"></div>
-            </div>
+        <div class="floating-drone-element">
+            <!-- This will be an animated floating drone silhouette -->
+            <div class="drone-silhouette"></div>
+            <div class="drone-scanner"></div>
         </div>
         
-        <div class="hero-brands">
-            <div class="hero-brands-title">Trusted By</div>
-            <div class="hero-brands-logos">
-                <div class="brand-logo">NETFLIX</div>
-                <div class="brand-logo">NATGEO</div>
-                <div class="brand-logo">REDBULL</div>
-                <div class="brand-logo">DISCOVERY</div>
-            </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
         </div>
+
     </section>
 
-    <!-- Services Section -->
+    <!-- Key Features Section -->
     <section id="services" class="services-section">
         <div class="section-header">
-            <h2>AI Drone Capabilities</h2>
-            <p>Advanced autonomous systems for intelligent aerial operations</p>
+            <h2>Key Project Features</h2>
+            <p>Core capabilities of our autonomous navigation system</p>
         </div>
         <div class="services-grid">
             <div class="service-card" data-tilt>
@@ -222,87 +227,129 @@
         </div>
     </section>
 
-    <!-- Portfolio Section with WebGL Gallery -->
-    <section id="portfolio" class="portfolio-section">
+    <!-- Implementation Section - Timeline Based Approach -->
+    <section id="portfolio" class="portfolio-section implementation-timeline">
         <div class="section-header">
-            <h2>AI Drone Projects</h2>
-            <p>Breakthrough autonomous systems and real-world applications</p>
+            <h2>Implementation</h2>
+            <p>Development journey of our autonomous drone navigation system</p>
         </div>
-        <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai-vision">AI Vision</button>
-            <button class="filter-btn" data-filter="autonomy">Autonomy</button>
-            <button class="filter-btn" data-filter="analytics">Analytics</button>
-            <button class="filter-btn" data-filter="research">Research</button>
+        
+        <div class="timeline-container">
+            <!-- Phase 1: Research & Planning -->
+            <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-content">
+                    <h3>Research & Planning</h3>
+                    <div class="timeline-image">
+                        <img src="images/WhatsApp Image 2025-05-02 at 09.29.30_55b67871.jpg" alt="Research & Planning Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>Our implementation began with extensive research into autonomous navigation systems and obstacle avoidance algorithms. We analyzed existing solutions and identified the key components needed for our system.</p>
+                        <ul class="timeline-highlights">
+                            <li>Literature review of navigation algorithms</li>
+                            <li>Hardware component selection</li>
+                            <li>System architecture design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2: Hardware Assembly -->
+            <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-content">
+                    <h3>Hardware Assembly</h3>
+                    <div class="timeline-image">
+                        <img src="images/making.jpg" alt="Hardware Assembly Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>We assembled the drone platform with carefully selected components to support our navigation system requirements. This included mounting sensors, cameras, and processing units.</p>
+                        <ul class="timeline-highlights">
+                            <li>Drone frame construction</li>
+                            <li>Sensor integration</li>
+                            <li>Processing unit installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 3: Model Training -->
+            <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-content">
+                    <h3>AI Model Training</h3>
+                    <div class="timeline-image">
+                        <img src="images/obj model training.jpg" alt="Model Training Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>We trained our object detection model using YOLOv8 architecture combined with CNN for obstacle detection on a custom dataset of navigation scenarios. The training process involved multiple iterations to achieve optimal performance.</p>
+                        <ul class="timeline-highlights">
+                            <li>Dataset preparation and annotation</li>
+                            <li>Neural network architecture design</li>
+                            <li>Hyperparameter optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 4: Performance Analysis -->
+            <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-content">
+                    <h3>Performance Analysis</h3>
+                    <div class="timeline-image">
+                        <img src="images/model traning results.png" alt="Performance Analysis Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>We conducted comprehensive performance analysis of our trained model, evaluating metrics such as detection accuracy, processing speed, and resource utilization on the drone's hardware.</p>
+                        <ul class="timeline-highlights">
+                            <li>Precision and recall evaluation</li>
+                            <li>Processing latency measurement</li>
+                            <li>Power consumption analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 5: Field Testing -->
+            <div class="timeline-item">
+                <div class="timeline-marker">5</div>
+                <div class="timeline-content">
+                    <h3>Field Testing</h3>
+                    <div class="timeline-image">
+                        <img src="images/Screenshot 2025-05-14 125241.jpg" alt="Field Testing Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>We conducted extensive field tests in various environments to validate our system's performance in real-world conditions. This included both controlled and uncontrolled testing scenarios.</p>
+                        <ul class="timeline-highlights">
+                            <li>Indoor controlled environment testing</li>
+                            <li>Outdoor obstacle course navigation</li>
+                            <li>System reliability assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 6: Final Integration -->
+            <div class="timeline-item">
+                <div class="timeline-marker">6</div>
+                <div class="timeline-content">
+                    <h3>Final Integration</h3>
+                    <div class="timeline-image">
+                        <img src="images/final assm.jpg" alt="Final Integration Phase">
+                    </div>
+                    <div class="timeline-details">
+                        <p>The final phase involved integrating all components into a cohesive system, fine-tuning parameters, and preparing comprehensive documentation for our university project submission.</p>
+                        <ul class="timeline-highlights">
+                            <li>System integration and optimization</li>
+                            <li>Documentation preparation</li>
+                            <li>Final presentation preparation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="ai-vision">
-                <div class="portfolio-image">
-                    <img src="images/making.jpg" alt="AI Object Detection">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>Vision System V3</h3>
-                            <p>Real-time Object Detection</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="autonomy">
-                <div class="portfolio-image">
-                    <img src="images/obj model training.jpg" alt="Model Training">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>Neural Navigator</h3>
-                            <p>Autonomous Flight System</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="analytics">
-                <div class="portfolio-image">
-                    <img src="images/model traning results.png" alt="AI Model Training Results">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>DataSense AI</h3>
-                            <p>Predictive Analytics Engine</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="research">
-                <div class="portfolio-image">
-                    <img src="images/Screenshot 2025-05-14 125241.jpg" alt="AI Research">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>SwarmLink</h3>
-                            <p>Multi-Drone Coordination</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="ai-vision">
-                <div class="portfolio-image">
-                    <img src="images/WhatsApp Image 2025-05-02 at 09.29.30_55b67871.jpg" alt="Computer Vision">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>PerceptionAI</h3>
-                            <p>Environmental Understanding</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="autonomy">
-                <div class="portfolio-image">
-                    <img src="images/making.jpg" alt="Autonomous System">
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-                            <h3>AutoPilot X</h3>
-                            <p>Self-Governing Flight</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </section>
         <div id="portfolio-webgl" class="portfolio-webgl">
             <!-- WebGL portfolio gallery will be rendered here -->
         </div>
@@ -336,39 +383,39 @@
         </div>
     </section>
 
-    <!-- AI Technology Highlight Section -->
+     <!-- AI Technology Highlight Section -->
     <section id="tech-highlight" class="tech-highlight-section">
         <div class="tech-highlight-container">
             <div class="tech-highlight-content">
-                <div class="tech-highlight-badge">Cutting-Edge Intelligence</div>
-                <h2 class="tech-highlight-title">Fully <span>Autonomous Systems</span></h2>
-                <p class="tech-highlight-description">Our drones feature state-of-the-art neural networks that enable complete autonomy without human intervention. These systems can analyze environments, make complex decisions, self-navigate through challenging spaces, and adapt to changing conditions in real-time.</p>
+                <div class="tech-highlight-badge">Advanced Technology</div>
+                <h2 class="tech-highlight-title">Autonomous <span>Navigation System</span></h2>
+                <p class="tech-highlight-description">Our autonomous drone system enables point-to-point navigation with real-time obstacle avoidance capabilities. Integrating Pixhawk 6x flight controller with Jetson Nano processing unit, the system uses sophisticated camera and LiDAR sensors for precise environmental perception in complex environments.</p>
                 <div class="tech-highlight-features">
                     <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="fas fa-robot"></i></div>
-                        <div class="tech-feature-text">Complete Autonomy</div>
+                        <div class="tech-feature-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="tech-feature-text">Pixhawk 6x + Jetson Nano</div>
                     </div>
                     <div class="tech-feature">
                         <div class="tech-feature-icon"><i class="fas fa-brain"></i></div>
-                        <div class="tech-feature-text">Self-Learning Algorithms</div>
+                        <div class="tech-feature-text">YOLOv8 + CNN Obstacle Detection</div>
                     </div>
                     <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="fas fa-map-marked-alt"></i></div>
-                        <div class="tech-feature-text">GPS-Free Navigation</div>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="tech-feature-text">Advanced Safety Systems</div>
+                        <div class="tech-feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="tech-feature-text">85% Open-space Accuracy</div>
                     </div>
                     <div class="tech-feature">
                         <div class="tech-feature-icon"><i class="fas fa-project-diagram"></i></div>
-                        <div class="tech-feature-text">Multi-Drone Coordination</div>
+                        <div class="tech-feature-text">MAVLink Communication Protocol</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon"><i class="fas fa-eye"></i></div>
+                        <div class="tech-feature-text">Camera + LiDAR Perception</div>
                     </div>
                 </div>
-                <a href="#contact" class="btn-primary tech-cta">Request AI Demo</a>
+                <a href="#contact" class="btn-primary tech-cta">Request System Demo</a>
             </div>
             <div class="tech-highlight-image">
-                <img src="images/model traning results.png" alt="AI Object Detection Model" class="tech-image">
+                <img src="images/model traning results.png" alt="Autonomous Navigation System" class="tech-image">
             </div>
         </div>
     </section>
@@ -467,137 +514,68 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
+    <!-- Project Team Section -->
+    <section id="team" class="team-section">
         <div class="section-header">
-            <h2>Client Testimonials</h2>
-            <p>What our clients say about our services</p>
+            <h2>Project Team</h2>
+            <p>The dedicated engineering students behind this final year project</p>
         </div>
-        <div class="testimonials-slider">
-            <div class="testimonial-slide active">
-                <div class="testimonial-content">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>The aerial footage provided by DroneVision for our real estate development was absolutely stunning. Their team was professional, efficient, and delivered beyond our expectations.</p>
-                    <div class="testimonial-author">
-                        <div class="author-image-placeholder"></div>
-                        <div class="author-info">
-                            <h4>Michael Anderson</h4>
-                            <p>Director, Skyline Properties</p>
-                        </div>
+        <div class="team-container">
+            <div class="team-image-container">
+                <img src="images/project team.jpg" alt="Project Team Members" class="team-image">
+            </div>
+            <div class="team-content">
+                <div class="team-description">
+                    <h3>Our Collaborative Effort</h3>
+                    <p>This autonomous drone navigation system was developed as part of our university's engineering final year project. Our team combined expertise in robotics, computer vision, and embedded systems to create a functional prototype that successfully demonstrates point-to-point navigation with obstacle avoidance.</p>
+                    <p>The project involved extensive research, hardware integration, software development, and rigorous testing to achieve our objectives. Each team member contributed their specialized knowledge to overcome the technical challenges involved in developing a reliable autonomous system.</p>
+                </div>
+                <div class="team-highlights">
+                    <div class="team-highlight-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Engineering Department</span>
+                    </div>
+                    <div class="team-highlight-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Academic Year 2024-2025</span>
+                    </div>
+                    <div class="team-highlight-item">
+                        <i class="fas fa-award"></i>
+                        <span>Excellence in Innovation</span>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-slide">
-                <div class="testimonial-content">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>DroneVision's work on our documentary was exceptional. They captured breathtaking aerial shots in challenging conditions that added tremendous value to our project.</p>
-                    <div class="testimonial-author">
-                        <div class="author-image-placeholder"></div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Film Producer, Horizon Films</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-slide">
-                <div class="testimonial-content">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>We hired DroneVision for our infrastructure inspection needs, and they delivered precise, detailed analysis that helped us identify issues we would have otherwise missed.</p>
-                    <div class="testimonial-author">
-                        <div class="author-image-placeholder"></div>
-                        <div class="author-info">
-                            <h4>David Thompson</h4>
-                            <p>Chief Engineer, Bridge Solutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="testimonial-controls">
-            <button class="testimonial-prev" aria-label="Previous testimonial" title="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
-            <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            <button class="testimonial-next" aria-label="Next testimonial" title="Next testimonial"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Project Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-header">
-            <h2>Contact Us</h2>
-            <p>Inquire about our autonomous drone solutions</p>
+            <h2>Project Details</h2>
+            <p>For more information about our autonomous navigation system</p>
         </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h4>Address</h4>
-                        <p>123 Skyview Drive, Drone City, DC 12345</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h4>Phone</h4>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h4>Email</h4>
-                        <p>info@dronevision.com</p>
+        <div class="contact-container academic-container">
+            <div class="academic-info">
+                <div class="academic-details">
+                    <h3>Final Year Project 2025</h3>
+                    <p>This autonomous drone navigation system was developed as part of our engineering department's final year project requirements. The system demonstrates practical applications of computer vision, machine learning, and embedded systems in solving real-world navigation challenges.</p>
+                    <p>For further technical details or to learn more about our implementation, please contact our academic supervisor or team members.</p>
+                    
+                    <div class="academic-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Navigation Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2024-25</span>
+                            <span class="stat-label">Academic Year</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">A+</span>
+                            <span class="stat-label">Project Grade</span>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon" aria-label="Vimeo" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
-                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-icon" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <select id="service" name="service" required aria-label="Select Service" title="Select Service">
-                            <option value="" disabled selected>Select AI capability of interest</option>
-                            <option value="autonomous-navigation">Autonomous Navigation</option>
-                            <option value="computer-vision">Computer Vision</option>
-                            <option value="data-analytics">Data Analytics</option>
-                            <option value="inspection">Autonomous Inspection</option>
-                            <option value="swarm">Swarm Intelligence</option>
-                            <option value="adaptive">Adaptive Learning</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <div class="form-response"></div>
-                    <button type="submit" class="btn-primary form-submit-btn">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -661,5 +639,6 @@
     <script src="js/contact-form.js"></script>
     <script src="js/portfolio-image-fix.js"></script>
     <script src="js/api-service.js"></script>
+    <script src="js/hero-animations.js"></script>
 </body>
 </html>
