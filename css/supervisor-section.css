@@ -1,0 +1,213 @@
+/* Project Supervisor Section Styling */
+.supervisor-container {
+    margin-top: 4rem;
+    background-color: rgba(15, 23, 42, 0.7);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.supervisor-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.supervisor-image-container {
+    flex: 0 0 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+.supervisor-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.supervisor-image:hover {
+    transform: scale(1.03);
+}
+
+.supervisor-details {
+    flex: 1;
+}
+
+.supervisor-details h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.supervisor-title {
+    color: #3b82f6;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.supervisor-remarks {
+    background-color: rgba(30, 41, 59, 0.7);
+    border-left: 4px solid #3b82f6;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.supervisor-remarks h5 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.supervisor-remarks blockquote {
+    font-style: italic;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.supervisor-grade {
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+.supervisor-grade span {
+    font-weight: 700;
+    color: #3b82f6;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+/* Large tablets and desktops */
+@media (max-width: 1200px) {
+    .supervisor-image-container {
+        flex: 0 0 250px;
+    }
+    
+    .supervisor-details h4 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Medium tablets */
+@media (max-width: 992px) {
+    .supervisor-content {
+        flex-direction: column;
+    }
+    
+    .supervisor-image-container {
+        flex: 0 0 auto;
+        max-width: 400px;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .supervisor-remarks {
+        border-radius: 8px;
+        border-left: none;
+        border-top: 4px solid #3b82f6;
+        padding: 1.2rem;
+    }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+    .supervisor-container {
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+    
+    .supervisor-content {
+        gap: 1.5rem;
+    }
+    
+    .supervisor-details h4 {
+        font-size: 1.5rem;
+    }
+    
+    .supervisor-title {
+        font-size: 1rem;
+    }
+    
+    .supervisor-remarks h5 {
+        font-size: 1.1rem;
+    }
+    
+    .supervisor-remarks blockquote {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .supervisor-container {
+        padding: 1.2rem;
+        margin-top: 2.5rem;
+        border-radius: 8px;
+    }
+    
+    .supervisor-content {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .supervisor-image-container {
+        max-width: 100%;
+    }
+    
+    .supervisor-details h4 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .supervisor-title {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+    
+    .supervisor-remarks {
+        padding: 1rem;
+    }
+    
+    .supervisor-remarks h5 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .supervisor-remarks blockquote {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 375px) {
+    .supervisor-container {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .supervisor-content {
+        gap: 0.8rem;
+    }
+    
+    .supervisor-details h4 {
+        font-size: 1.2rem;
+    }
+    
+    .supervisor-remarks {
+        padding: 0.8rem;
+    }
+    
+    .supervisor-remarks blockquote {
+        font-size: 0.85rem;
+    }
+}
