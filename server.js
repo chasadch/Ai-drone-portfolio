@@ -26,6 +26,35 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname)));
 
 // API Routes
+
+// Chatbot API endpoint
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message } = req.body;
+    
+    if (!message) {
+      return res.status(400).json({
+        success: false,
+        message: 'Message is required'
+      });
+    }
+    
+    const { generateChatResponse } = require('./js/gemini-service');
+    const response = await generateChatResponse(message);
+    
+    res.status(200).json({
+      success: true,
+      message: response
+    });
+  } catch (error) {
+    console.error('Error processing chat message:', error);
+    res.status(500).json({
+      success: false,
+      message: 'An error occurred while processing your message'
+    });
+  }
+});
+
 app.post('/api/contact', (req, res) => {
   try {
     const { name, email, phone, service, message } = req.body;
@@ -140,7 +169,29 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Start server with port fallback
+const startServer = (port) => {
+  // Convert port to a number to ensure proper comparison and incrementation
+  const portNum = parseInt(port, 10);
+  
+  // Validate port number is in valid range
+  if (portNum < 1024 || portNum >= 65535) {
+    console.log(`Port ${portNum} is outside valid range, defaulting to 8080`);
+    port = 8080;
+  }
+  
+  const server = app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  }).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      // Only increment by 1 to avoid exceeding port range
+      const nextPort = portNum + 1;
+      console.log(`Port ${port} is already in use, trying ${nextPort}...`);
+      startServer(nextPort);
+    } else {
+      console.error('Server error:', err);
+    }
+  });
+};
+
+startServer(PORT);

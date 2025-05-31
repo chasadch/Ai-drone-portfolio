@@ -1,16 +1,12 @@
 /* 
  * Image Cleanup CSS
- * Removes error signs and debug information from all images
+ * Removes error signs and debug information from portfolio images
  */
 
 /* Hide all SVG overlay elements that might contain error signs */
-img + svg.error-indicator,
-.error-indicator,
-.debug-overlay,
-div[class*="error"],
-div[class*="debug"],
-div[id*="error"],
-div[id*="debug"] {
+.portfolio-image img + svg,
+.portfolio-image .error-indicator,
+.portfolio-image .debug-overlay {
     display: none !important;
 }
 
@@ -19,46 +15,11 @@ div[id*="debug"] {
 .debug-text,
 .error-message,
 .overlay-debug,
-.detection-box-error,
-.warning-icon,
-.alert-icon,
-.exclamation-mark {
+.detection-box-error {
     display: none !important;
 }
 
-/* Fix image display */
-img {
-    display: block !important;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Ensure image containers display properly */
-.image-container,
-.portfolio-image,
-.tech-highlight-image,
-.portfolio-item,
-.team-image-container {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Remove any overlays on images but keep the images themselves */
-img:before,
-img:after {
-    display: none !important;
-}
-
-/* Ensure images in specific containers display correctly */
-.tech-highlight-image img,
-.team-image-container img,
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block !important;
-}
+/* Clean overlay for portfolio images */
 .portfolio-image {
     position: relative;
     overflow: hidden;
