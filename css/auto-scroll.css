@@ -1,0 +1,67 @@
+/**
+ * Styles for auto-scroll functionality
+ */
+.auto-scroll-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+}
+
+.auto-scroll-control:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auto-scroll-control i {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.auto-scroll-control:hover i {
+    transform: scale(1.1);
+}
+
+/* Fade in animation for the control */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+.auto-scroll-control {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Adjust positioning for mobile */
+@media (max-width: 768px) {
+    .auto-scroll-control {
+        bottom: 80px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .auto-scroll-control i {
+        font-size: 16px;
+    }
+}
